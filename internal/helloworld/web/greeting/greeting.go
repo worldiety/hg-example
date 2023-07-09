@@ -12,9 +12,13 @@ import (
 var templateFiles embed.FS
 
 type PageState struct {
-	Title  string
-	Greets string
+	Title   string
+	Greets  string
+	DevMode bool `json:"-"`
+	Count   int
 }
+
+type AddEvent int
 
 func Page(tplFiles ...fs.FS) http.HandlerFunc {
 	return hg.Handler(
@@ -33,6 +37,7 @@ func Page(tplFiles ...fs.FS) http.HandlerFunc {
 		hg.OnRequest(
 			func(r *http.Request, model PageState) PageState {
 				model.Title = "greetings from hg"
+				model.DevMode = true
 				name := "Torben"
 				if optName := r.URL.Query().Get("name"); optName != "" {
 					name = optName
@@ -43,5 +48,10 @@ func Page(tplFiles ...fs.FS) http.HandlerFunc {
 				return model
 			},
 		),
+
+		hg.Update(hg.Case("add", func(model PageState, msg AddEvent) PageState {
+			model.Count += int(msg)
+			return model
+		})),
 	)
 }

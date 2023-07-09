@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	helloworld_srv "github.com/worldiety/hg-example/internal/app/helloworld-srv"
+	helloworld_srv "github.com/worldiety/hg-example/internal/app/helloworld"
 	"github.com/worldiety/hg-example/internal/sys/logging"
 	"golang.org/x/exp/slog"
 )

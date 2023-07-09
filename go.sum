@@ -1,5 +1,10 @@
 github.com/go-chi/chi/v5 v5.0.8 h1:lD+NLqFcAi1ovnVZpsnObHGW4xb4J8lNmoYVfECH1Y0=
 github.com/go-chi/chi/v5 v5.0.8/go.mod h1:DslCQbL2OYiznFReuXYUmQ2hGd1aDpCnlMNITLSKoi8=
+github.com/laher/mergefs v0.1.1 h1:nV2bTS57vrmbMxeR6uvJpI8LyGl3QHj4bLBZO3aUV58=
+github.com/laher/mergefs v0.1.1/go.mod h1:FSY1hYy94on4Tz60waRMGdO1awwS23BacqJlqf9lJ9Q=
+github.com/matryer/is v1.4.0/go.mod h1:8I/i5uYgLzgsgEloJE1U6xx5HkBQpAZvepWuujKwMRU=
+github.com/vearutop/statigz v1.3.0 h1:RoIbvbMilsT8gXtPflWLcVlce89l5qZP9SHlKhXtEsg=
+github.com/vearutop/statigz v1.3.0/go.mod h1:jqlOPvLAdiQktMtYAkyguI3Ee0FA26iXKeEx2pS5l88=
 github.com/worldiety/hg v0.0.0-20230706191028-893d4fa15e12 h1:obS/9yJyqsFeKrPTZqzfFF15SP5BdIrGCWK5p99OAJU=
 github.com/worldiety/hg v0.0.0-20230706191028-893d4fa15e12/go.mod h1:50XzTw/qX6kM7znzle2dc0qyRTq2xWDvvTR7oqC5ULk=
 github.com/worldiety/hg v0.0.0-20230708090621-aacdf4aa0cd4 h1:rIgdxHg2wNTtj3WDe4xWbPp/uSVU5+eOZLv66No8ko8=
