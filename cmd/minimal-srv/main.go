@@ -50,10 +50,10 @@ func Page() http.HandlerFunc {
 			},
 		),
 
-		hg.Update(hg.Case("add", func(model PageState, msg AddEvent) PageState {
+		hg.Case("add", func(model PageState, msg AddEvent) PageState {
 			model.Count += int(msg)
 			return model
-		})),
+		}),
 	)
 }
 
