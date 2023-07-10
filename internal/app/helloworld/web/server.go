@@ -6,6 +6,7 @@ import (
 	"github.com/vearutop/statigz"
 	"github.com/worldiety/hg"
 	"github.com/worldiety/hg-example/internal/app/helloworld/web/index"
+	"github.com/worldiety/hg-example/internal/helloworld/web/about"
 	"github.com/worldiety/hg-example/internal/helloworld/web/greeting"
 	"net/http"
 	"time"
@@ -17,6 +18,7 @@ func Serve(host string) error {
 	router.Handle("/assets/*", assets)
 	router.Handle("/version/poll", hg.LongPollHandler(time.Second*30))
 	greeting.Route(router, index.TemplateFiles)
+	about.Route(router, index.TemplateFiles)
 
 	return http.ListenAndServe(host, router)
 }
