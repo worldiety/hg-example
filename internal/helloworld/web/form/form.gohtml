@@ -1,0 +1,22 @@
+{{define "Form"}}
+    <form hg-event="Check" hg-trigger="submit">
+        <label>
+            Firstname:
+            <input name="Firstname" type="text" value="{{.Form.Firstname}}">
+            <br>
+            {{if .Form.FirstnameError}}
+            <p class="text-red-600">{{.Form.FirstnameError}}</p>
+            {{end}}
+        </label>
+
+        <label>
+            Age:
+            <input name="Age" type="text" value="{{.Form.Age}}">
+            <br>
+            {{if .Form.AgeError}}
+                <p class="text-red-600">{{.Form.AgeError}}</p>
+            {{end}}
+        </label>
+        <button type="submit">Check</button>
+    </form>
+{{end}}
